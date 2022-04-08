@@ -73,6 +73,12 @@ class _HorizontalResponsiveGridViewWithControlsState extends State<HorizontalRes
   }
 
   @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return _HorizontalGridViewWithControlsLayout(
       controller: _scrollController,
